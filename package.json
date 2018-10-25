@@ -4,8 +4,15 @@
   "description": "RESTFul API node-express-typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
   },
   "author": "Ivelton Queiroz",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.4"
+  }
 }
