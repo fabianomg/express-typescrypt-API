@@ -1,5 +1,8 @@
 import express = require('express');
 
+import * statusController from './controllers/status'
+
+
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
