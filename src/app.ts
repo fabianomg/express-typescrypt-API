@@ -1,14 +1,17 @@
 import express = require('express');
 
-import * statusController from './controllers/status'
+import * as statusController from './controllers/status'
 
 
 const app = express();
 
 app.set("port", process.env.PORT || 3000);
 
-app.get('/', (req, res, next) => {
-	res.send("hello node");
-})
+app.get('/', statusController.hi);
+
+app.get('/hello', statusController.hello);
+
+app.get('/awesome', statusController.awesome);
+
 
 export default app;

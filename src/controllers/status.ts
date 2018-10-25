@@ -1,9 +1,13 @@
-import { Request, Response } from 'express';
+import { Request, Response } from 'express'
 
-export let hi = (req:Resquest, res:Response) ==> {
-	res.send("Alô")
+export let hi = (req: Request, res: Response) => {
+    res.send("oi")
 }
 
-export let awesome = (req:Resquest, res:Response) ==> {
-	res.send("Awsome")
+export let hello = (req: Request, res: Response) => {
+    res.send("como vai ?")
+}
+
+export let awesome = (req: Request, res: Response) => {
+    res.send("tudo beleza")
 }
